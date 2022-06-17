@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<conio.h>
+void sort(int* arr,int num){
+    int i,j,temp;
+    for(i=0;i<num;i++){
+        for(j=i+1;j<num;j++){
+            if(arr[i]>arr[j]){
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]= temp;
+            }
+        }
+    }
+}
+void main(){
+    int n,a[100],i;
+    printf("\n enter the number of element : ");
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    sort(a,n);
+    printf("\nsorted array ");
+    for(i=0;i<n;i++){
+        printf("\n%d",a[i]);
+    }
+}
